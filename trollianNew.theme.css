@@ -49,6 +49,7 @@
     
     --background-primary: var(--themetrans);
     --channeltextarea-background: var(--themetrans);
+    --text-link: var(--trollgreen);
 }
 
 .theme-dark .searchFilter_dbda51, .theme-dark .searchAnswer__2ccaf {
@@ -452,6 +453,12 @@ div[aria-label="Servers"] .listItem__48528:nth-of-type(even) .pill__6b31b {
     color: black;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+}
+
+.messageContent_abea64 a {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--trollgreen)
 }
 
 .embedWrapper__47b23 {
