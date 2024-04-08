@@ -1,7 +1,7 @@
 /**
  * @name Trollian New Theme
  * @author FlaringK
- * @version 0.1.1
+ * @version 0.1.2
  * @description Highly customizable theme for BetterDiscord.
  * @source https://github.com/FlaringK/BD-pesterchum-classic-theme
  * @website https://flaringk.github.io
@@ -305,10 +305,6 @@ div[aria-label="Servers"] .listItem__48528:nth-of-type(even) .pill__6b31b {
     left: unset;
     right: 0;
     scale: -1;
-}
-
-.item_f9d377 {
-    background-color: var(--blood);
 }
 
 .expandedFolderBackground_b1385f {
