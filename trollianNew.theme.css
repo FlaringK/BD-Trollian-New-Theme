@@ -1,0 +1,467 @@
+/**
+ * @name Trollian New Theme
+ * @author FlaringK
+ * @version 0.1.0
+ * @description Highly customizable theme for BetterDiscord.
+ * @source https://github.com/FlaringK/BD-pesterchum-classic-theme
+ * @website https://flaringk.github.io
+ */
+
+ :root {
+    --hexagon:  polygon(
+        20% 5%, 
+        80% 5%, 
+        100% 50%, 
+        80% 95%, 
+        20% 95%, 
+        0% 50%);
+    --blood: #2c0c57;
+    /* --blood: red; */
+    --bloodAcc: #350b83;
+
+    --themetrans: #000c;
+    --trollgreen: #3bde61;
+    --trollpink: #d819d5;
+    --trolldullpink: #650b73;
+    --trolldark: #040429;
+}
+
+@font-face {
+  font-family: alternianmono;
+  src: url("https://file.garden/X1htvgJ0DEp_tp-Z/discordfontsource/AlternianCourierAdvanced-Regular%20(REDONE).ttf");
+}
+
+/* DEFAULT COLOURS */
+
+.theme-dark, .theme-dark .themed_b152d4 {
+    --background-secondary: var(--trolldark);
+    --background-secondary-alt: var(--trolldark);
+    --background-tertiary: var(--trolldark);
+    --__header-bar-background: var(--trolldark);
+    
+    --header-primary: var(--trollpink);
+    --header-secondary: var(--trollpink);
+    --channel-icon: var(--trollpink);
+    --interactive-normal: var(--trollpink);
+    --channels-default: var(--trollpink);
+
+    --interactive-muted: var(--trolldullpink);
+    
+    --background-primary: var(--themetrans);
+    --channeltextarea-background: var(--themetrans);
+}
+
+.theme-dark .searchFilter_dbda51, .theme-dark .searchAnswer__2ccaf {
+    background-color: var(--trolldark);
+}
+
+/* CHAT ICONS */
+.avatar__08316, 
+.username__0b0e7::before,
+.username_d30d99::before, 
+.username-h_Y3Us::before, 
+.replyAvatar__4ba85 {
+    border-radius: 0;
+    clip-path: var(--hexagon)
+}
+
+.username__0b0e7, .zalgo__39311.cozy_f5c119 .header__6a14d {
+    overflow: visible;
+}
+
+.username__0b0e7::before,
+.username_d30d99::before, 
+.username-h_Y3Us::before {
+    content: "";
+    width: 46px;
+    height: 46px;
+    display: block;
+    background-color: currentColor;
+
+    position: absolute;
+    left: -59px;
+    top: -1px;
+}
+
+.username-h_Y3Us::before {
+    background-color: currentColor;
+}
+
+.username-h_Y3Us:nth-child(2) {
+    background-color: transparent;
+}
+
+.repliedMessage__636d2 .botTagCompact__23d18 {
+    display: none;
+}
+
+.repliedMessage__636d2 .username__0b0e7::before {
+    width: 36px;
+    height: 36px;
+    left: -40px;
+    top: -9px;
+}
+
+.repliedMessage__636d2 .replyAvatar__4ba85 {
+    width: 30px;
+    height: 30px;
+    transform: translate(-22px, 0);
+    margin-right: -15px;
+    z-index: 1;
+}
+
+.threadMessageAccessory_ef0459 img {
+    z-index: 1;
+}
+
+.threadMessageAccessory_ef0459 .username__0b0e7::before {
+    width: 18px;
+    height: 18px;
+    left: -25px;
+    top: 0px;
+}
+
+/* PROFILE TAB ICONS */
+.avatarWrapper__0cd44 {
+    scale: 1.48;
+    transform: translate(2px, 4px);
+}
+
+.avatarWrapper__0cd44::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: 
+        var(--profile-gradient-primary-color);
+    /* background-image: linear-gradient(
+        var(--profile-gradient-primary-color),
+        var(--profile-gradient-secondary-color) ); */
+    clip-path: var(--hexagon);
+}
+
+.avatarStack__789b4 img {
+    scale: 0.9;
+    clip-path: var(--hexagon);
+}
+
+.userPopoutOuter__3884e, 
+.userPopoutInner_e90432 {
+    clip-path: polygon(
+        50px 0%, 
+        calc(100% - 50px) 0%, 
+        100% 25px, 
+        100% calc(100% - 25px), 
+        calc(100% - 50px) 100%, 
+        50px 100%, 
+        0% calc(100% - 25px), 
+        0% 25px);
+}
+
+.userPopoutOverlayBackground_bf6444 {
+    transform: translate(0, 5px);
+    background-image: linear-gradient(
+        var(--themetrans),
+        transparent 95%
+    );
+    background-color: transparent;
+}
+
+.userPopoutInner_e90432:before {
+    background-color: transparent;
+    background-image: url(https://file.garden/X1htvgJ0DEp_tp-Z/discordfontsource/SP.046.0004.png);
+    background-position: 50% 120%;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+
+.theme-dark {
+    --profile-gradient-primary-color: var(--trollpink);
+    --profile-gradient-secondary-color: var(--trolldark);
+}
+
+.userPopoutInner_e90432 .markup_a7e664 {
+    clip-path: none;
+    background: transparent;
+}
+
+.inputWrapper_ecb776 {
+    clip-path: polygon(
+        30px 0%, 
+        calc(100% - 30px) 0%, 
+        100% 20px, 
+        100% calc(100% - 20px), 
+        calc(100% - 30px) 100%, 
+        30px 100%, 
+        0% calc(100% - 20px), 
+        0% 20px);
+    border: none;
+    background-color: var(--profile-gradient-secondary-color);
+    scale: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.inputDefault__22335 {
+    background-color: var(--trolldark);
+    clip-path: polygon(
+        30px 0%, 
+        calc(100% - 30px) 0%, 
+        100% 20px, 
+        100% calc(100% - 20px), 
+        calc(100% - 30px) 100%, 
+        30px 100%, 
+        0% calc(100% - 20px), 
+        0% 20px);
+    scale: 0.9;
+    width: 108%;
+    margin-left: -4%;
+    padding: 10px 20px;
+}
+
+/* USER LSIT ICONS */
+
+.username__4a6f7::before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    display: block;
+    background-color: currentColor;
+
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    clip-path: var(--hexagon);
+    opacity: 0.75;
+}
+
+.avatar__6337f {
+    z-index: 1;
+}
+
+/* SERVER LSIT ICONS */
+
+.icon__11cf1 {
+    clip-path: var(--hexagon);
+    scale: 0.80;
+}
+
+.wrapper__9916c {
+    scale: 1.2;
+}
+.wrapper__9916c::before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    display: block;
+    background-color: var(--blood);
+    clip-path: var(--hexagon);
+}
+
+.wrapper__9916c .folder__17546 {
+    scale: 0.9;
+    clip-path: var(--hexagon);
+    --background-secondary: var(--blood);
+}
+
+.wrapper__9916c .wrapper__8436d {
+    scale: 0.9;
+    clip-path: var(--hexagon);
+    background-color: var(--bloodAcc);
+}
+
+.childWrapper_a6ce15 {
+    background-color: var(--bloodAcc);
+    --brand-experiment: var(--bloodAcc);
+}
+
+/* DIRECT MESSAGES ICONS */
+
+.privateChannels__9b518 .wrapper__3ed10 {
+    scale: 1.25;
+}
+
+/* SERVER LIST DOUBLEUP */
+
+.guilds__2b93a {
+    width: 128px;
+}
+
+div[aria-label="Servers"] .listItem__48528:nth-of-type(even) {
+    transform: translate(55px, -26px);
+    margin-bottom: -45px;
+}
+
+div[aria-label="Servers"] .listItem__48528:nth-of-type(even):last-child {
+    margin-bottom: 5px;
+}
+
+div[aria-label="Servers"] .wrapper__832f2 ul {
+    height: unset !important;
+}
+
+div[aria-label="Servers"] .listItem__48528:nth-of-type(even) .pill__6b31b {
+    left: unset;
+    right: 0;
+    scale: -1;
+}
+
+.item_f9d377 {
+    background-color: var(--blood);
+}
+
+.expandedFolderBackground_b1385f {
+    background-color: var(--trolldullpink);
+    opacity: 0.8;
+    border-radius: 0;
+    width: unset;
+    left: 8px;
+    right: -47px;
+    bottom: 2px;
+
+    clip-path: polygon(
+        0% 25px, 
+        15px 0%, 
+
+        calc(58px - 15px) 0%,
+        58px 25px,
+
+        calc(100% - 15px) 26px,
+        100% 51px,
+        
+
+        100% calc(100% - 26px - 25px),
+        calc(100% - 15px) calc(100% - 26px),
+
+        58px calc(100% - 26px),
+        calc(58px - 15px) 100%,
+
+        15px 100%,
+        0% calc(100% - 25px)
+        );
+}
+
+/* DISCORD LOGO */
+
+.wordmark__5b8c9 {
+    display: none;
+}
+
+.titleBar__710b0::before {
+    content: "Trollan v0.6.12";
+    color: var(--trollgreen);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.5em;
+    font-family: alternianmono;
+}
+
+/* BACKGROUND */
+
+.container_d1f8f5 {
+    background-image:
+        linear-gradient(0deg, var(--themetrans) 0%, var(--blood) 100%),
+        url("https://file.garden/X1htvgJ0DEp_tp-Z/discordfontsource/EXGSnSDXQAAxeRh.jpg");
+    background-position: center bottom;
+}
+
+.appAsidePanelWrapper__5e6e2,
+.guilds__2b93a,
+.content__76dcf,
+.chat__52833,
+.chatContent_f087cb {
+    background: transparent;
+}
+
+/* SEARCHBAR */
+
+.searchBar__5a20a {
+    background-color: var(--header-primary);
+    --text-muted: var(--background-tertiary);
+}
+
+.searchFilter_dbda51, .searchAnswer__2ccaf {
+    padding: 0 0.6em;
+    clip-path: var(--hexagon);
+}
+
+/* GLOW */
+
+.container__7e23c *, .title_d4ba1a * {
+    text-shadow: currentColor 0 0 5px;
+}
+
+/* CHANNEL GROUPS */
+
+.icon__3aa8e {
+    color: var(--trollgreen);
+}
+
+.name__27f04 {
+    color: var(--trollgreen);
+    display: flex;
+    justify-content: center;
+
+    background-image: 
+        linear-gradient(0deg, 
+        transparent 35%, 
+        var(--trollgreen) 50%, 
+        transparent 65%);
+}
+
+.name__27f04 .overflow__993fa {
+    background-color: var(--background-secondary);
+    padding: 0 0.5em;
+}
+
+/* CHAT BUBBLES */
+
+.markup_a7e664 {
+    color: var(--trollpink);
+    width: fit-content;
+    padding-right: 10px;
+    background-color: currentColor;
+
+    clip-path: polygon(
+        0% 0%,
+
+        calc(100% - 6px) 0%,
+        100% 11px,
+        100% 100%,
+
+        0% 100%
+    );
+}
+
+.markup_a7e664 h1, .markup_a7e664 h2, .markup_a7e664 h3, .markup_a7e664 h4, .markup_a7e664 h5, .markup_a7e664 h6 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.messageContent_abea64 > span, 
+.messageContent_abea64 > s,
+.messageContent_abea64 > b,
+.messageContent_abea64 > u,
+.messageContent_abea64 > i,
+.messageContent_abea64 h1, 
+.messageContent_abea64 ol, 
+.messageContent_abea64 ul {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.embedWrapper__47b23 {
+    margin-top: 5px;
+    background-color: var(--background-secondary);
+}
+
+.markup_a7e664.editor__66464 {
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: unset;
+}
